@@ -1,16 +1,18 @@
+import React from "react";
+import movies from "./data/movies"
 
-import './App.css'
-import {movies} from './data/movies'
+import "./App.css";
+import MovieCard from "./components/Card/MovieCards";
 
-function App() {
-  
+const App = () => {
   return (
     <div className="app">
-      {movies.map((movie, index) => (
-        <MovieCard key={index} movie={movie}/>
+      {movies.map((movie) => (
+        <MovieCard key={movie.title} movie={movie}/>
+        
       ))}
     </div>
   );
-}
+};
 
-export default App
+export default App;
